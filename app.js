@@ -60,10 +60,11 @@
 
     /**
      * Limpia la previsualización y el input
+     * Remueve src completamente para evitar icono de imagen rota + alt text
      */
     function clearPhotoPreview() {
         selectedFile = null;
-        photoPreview.src = '';
+        photoPreview.removeAttribute('src');
         photoPreview.hidden = true;
         photoInput.value = '';
     }

@@ -128,7 +128,13 @@ body {
     border-color: var(--primary);
 }
 
-.photo-preview {
+/* Forzar ocultamiento nativo: el atributo HTML hidden debe ganar siempre */
+.photo-preview[hidden] {
+    display: none !important;
+}
+
+/* Solo aplicar estilos de layout cuando NO está hidden */
+.photo-preview:not([hidden]) {
     width: 100%;
     height: 100%;
     object-fit: cover;
